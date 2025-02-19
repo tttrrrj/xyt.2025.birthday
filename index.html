@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日祝福</title>
+    <style>
+        .card {
+            width: 600px;
+            height: 400px;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .birthday-text {
+            text-align: center;
+            color: #ffffff;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .date {
+            font-size: 1.8em;
+            margin: 15px 0;
+            color: #fff3cd;
+        }
+
+        .wish {
+            font-size: 1.2em;
+            line-height: 1.5;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        /* 装饰元素 */
+        .card::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 20px,
+                rgba(255,255,255,0.1) 20px,
+                rgba(255,255,255,0.1) 40px
+            );
+            animation: shine 8s infinite linear;
+        }
+
+        @keyframes shine {
+            from { transform: translateX(-50%) translateY(-50%); }
+            to { transform: translateX(0%) translateY(0%); }
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255,255,255,0.8);
+            border-radius: 50%;
+            animation: confetti 3s infinite;
+        }
+
+        @keyframes confetti {
+            0% { transform: translateY(-100px) rotate(0deg); }
+            100% { transform: translateY(400px) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="birthday-text">
+            <h1>夏涌涛 生日快乐</h1>
+            <div class="date">🎂 2月26日 🎉</div>
+            <p class="wish">愿岁岁欢愉常相伴<br>奔赴每一程热爱<br>心向璀璨星辰！</p>
+        </div>
+        <!-- 装饰彩纸 -->
+        <div class="confetti" style="left:10%; animation-delay:0.5s"></div>
+        <div class="confetti" style="left:30%; animation-delay:1.2s"></div>
+        <div class="confetti" style="left:70%; animation-delay:2s"></div>
+    </div>
+</body>
+</html>
