@@ -105,41 +105,6 @@
             100% { opacity: 0.6; transform: translateY(0) scale(1); }
         }
 
-        /* 气球装饰 */
-        .balloon {
-            position: absolute;
-            width: 30px;
-            height: 40px;
-            background: #ff7b7b;
-            border-radius: 50%;
-            animation: float 5s ease-in-out infinite;
-        }
-
-        .balloon:nth-child(1) {
-            left: 5%;
-            animation-delay: 0.5s;
-        }
-
-        .balloon:nth-child(2) {
-            left: 30%;
-            animation-delay: 1s;
-        }
-
-        .balloon:nth-child(3) {
-            left: 60%;
-            animation-delay: 1.5s;
-        }
-
-        .balloon:nth-child(4) {
-            left: 85%;
-            animation-delay: 2s;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-40px); }
-            100% { transform: translateY(0); }
-        }
     </style>
 </head>
 <body>
@@ -157,11 +122,6 @@
         <div class="star" style="top:10%; left:10%;"></div>
         <div class="star" style="top:30%; left:50%;"></div>
         <div class="star" style="top:60%; left:80%;"></div>
-        <!-- 气球装饰 -->
-        <div class="balloon"></div>
-        <div class="balloon"></div>
-        <div class="balloon"></div>
-        <div class="balloon"></div>
     </div>
 </body>
 </html>
